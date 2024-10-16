@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Application\CatalogService.Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\CatalogService.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

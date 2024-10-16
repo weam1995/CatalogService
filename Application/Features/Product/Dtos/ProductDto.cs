@@ -16,7 +16,7 @@ namespace CatalogService.Application.Features.Product.Dtos
         public string? Description { get; set; }
         public string? Image { get; set; }
         public string CategoryName { get; set; } = string.Empty;
-        public Money Price { get; set; } = new Money();
+        public Money Price { get; set; }
         public int Amount { get; set; }
 
         public void Mapping(Profile profile)

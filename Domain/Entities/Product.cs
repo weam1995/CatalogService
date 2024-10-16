@@ -16,7 +16,7 @@ namespace CatalogService.Domain.Entities
         public string? ImageURL { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
-        public Money Price { get; set; } = new Money();
+        public Money Price { get; set; }
         public int Amount { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Persistence.Configurations
+namespace CatalogService.Persistence.Configurations
 {
     public class CategoryConfiguration : IEntityTypeConfiguration<Category>
     {

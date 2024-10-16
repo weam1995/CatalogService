@@ -14,7 +14,7 @@ namespace CatalogService.Domain.Entities
         public List<Product> Products { get; set; } = [];
 
         public Category? ParentCategory { get; set; }
-        public int? ParentCategoryId { get; set; }
+        public int? ParentCategoryId { get; set; } = -1;
         public List<Category> SubCategories { get; set; } = [];
 
 

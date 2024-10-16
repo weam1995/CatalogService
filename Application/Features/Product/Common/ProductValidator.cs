@@ -11,7 +11,7 @@ namespace Application.Features.Product.Common
 {
     public class ProductValidator : AbstractValidator<CatalogService.Domain.Entities.Product>
     {
-        public void ApplyCommonRules() {
+        public void ApplyCommonValidations() {
             RuleFor(x => x.Name).NotEmpty().NotNull().WithMessage("Product name is required").MaximumLength(50).WithMessage("Product name cannot exceed 50 characters");
             RuleFor(x => x.ImageURL).Must(BeAValidUrl).WithMessage("ImageURL URL must be a valid URL").When(x => !string.IsNullOrEmpty(x.ImageURL));
             RuleFor(x => x.Price).NotNull().WithMessage("Price is required");

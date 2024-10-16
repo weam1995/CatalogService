@@ -16,7 +16,7 @@ namespace CatalogService.Application.Features.Category.Dtos
 
         public void Mapping(Profile profile)
         {
-            var c = profile.CreateMap<Domain.Entities.Category, CategoryDto>().ForMember(d => d.ParentCategoryName, opt => opt.MapFrom(src => src.ParentCategoryId != 0 ? src.ParentCategory.Name : string.Empty));
+            var c = profile.CreateMap<Domain.Entities.Category, CategoryDto>().ForMember(d => d.ParentCategoryName, opt => opt.MapFrom(src => src.ParentCategory != null ? src.ParentCategory.Name : string.Empty));
         }
     }
 }

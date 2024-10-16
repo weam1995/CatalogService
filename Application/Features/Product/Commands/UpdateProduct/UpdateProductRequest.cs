@@ -14,9 +14,9 @@ namespace Application.Features.Product.Commands.UpdateProduct
         public string Id { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
-        public string? Image { get; set; }
+        public string? ImageURL { get; set; }
         public int CategoryId { get; set; }
-        public Money Price { get; set; } = new Money();
+        public Money Price { get; set; }
         public int Amount { get; set; }
     }
 }

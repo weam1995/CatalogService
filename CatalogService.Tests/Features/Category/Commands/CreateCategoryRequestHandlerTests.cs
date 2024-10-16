@@ -1,5 +1,6 @@
 ﻿using Application.Contracts.Persistence;
-using Application.Features.Category.Queries.ListCategories;
+using Application.Features.Category.Commands.CreateCategory;
+using Application.Features.Category.Queries.GetCategory;
 using AutoMapper;
 using CatalogService.Application.Features.Category.Dtos;
 using CatalogService.Application.UnitTests.Mocks;
@@ -8,32 +9,32 @@ using Shouldly;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CatalogService.Application.UnitTests.Features.Category.Queries
+namespace CatalogService.UnitTests.Features.Category.Commands
 {
-    public class ListCategoriesRequestHandlerTests
+    public class CreateCategoryRequestHandlerTests
     {
         private readonly IMapper _mapper;
         private readonly Mock<ICategoryRepository> _mockRepo;
 
-        public ListCategoriesRequestHandlerTests()
+        public CreateCategoryRequestHandlerTests()
         {
             _mockRepo = MockCategoryRepository.GetMockCategoryRepository();
             var mapperConfig = new MapperConfiguration(c => { c.AddProfile<MappingProfile>(); });
             _mapper = mapperConfig.CreateMapper();
         }
         [Fact]
-        public async Task ListCategoriesTest_ShouldReturnCorrectCategoriesCount()
+        public async Task CreateCategory_ShouldIncrementCategoryItemsCount()
         {
             //Arrange
-            var handler = new ListCategoriesRequestHandler(_mockRepo.Object, _mapper);
+            var handler = new CreateCategoryRequestHandler(_mockRepo.Object);
             //Act
-            var result = await handler.Handle(new ListCategoriesRequest(), CancellationToken.None);
+            var result = await handler.Handle(new CreateCategoryRequest("Gardening","https://gardening.com/",0), CancellationToken.None);
             //Assert
-            result.ShouldBeOfType<List<CategoryDto>>();
-            result.Count.ShouldBe(5);
+            result.ShouldBe(5);
         }
     }
 }

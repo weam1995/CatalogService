@@ -36,5 +36,16 @@ namespace CatalogService.Application.UnitTests.Features.Category.Queries
             result.ShouldBeOfType<CategoryDto>();
             result.ShouldNotBeNull();
         }
+        [Fact]
+        public async Task GetCategoryById_ShouldReturnCorrectParentCategoryName()
+        {
+            //Arrange
+            var handler = new GetCategoryByIdRequestHandler(_mockRepo.Object, _mapper);
+            //Act
+            var result = await handler.Handle(new GetCategoryByIdRequest(1), CancellationToken.None);
+
+            //Assert
+            result.ParentCategoryName.ShouldBeEquivalentTo("Electronics");
+        }
     }
 }

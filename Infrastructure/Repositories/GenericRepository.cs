@@ -1,23 +1,23 @@
 ﻿using Application.Contracts.Persistence;
 using CatalogService.Domain.Entities.Common;
+using CatalogService.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
-using Persistence.Contexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Persistence.Repositories
+namespace CatalogService.Persistence.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
-        private readonly CatalogDBContext _dbContext;   
+        private readonly CatalogDBContext _dbContext;
         private readonly DbSet<T> _dbSet;
         public GenericRepository(CatalogDBContext dbContext)
         {
-            _dbContext= dbContext;
-            _dbSet= dbContext.Set<T>();
+            _dbContext = dbContext;
+            _dbSet = dbContext.Set<T>();
         }
         public async Task<int> CreateAsync(T entity)
         {
@@ -37,9 +37,9 @@ namespace Persistence.Repositories
             return _dbSet.AsNoTracking().ToListAsync();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T?> GetByIdAsync(int id)
         {
-            return await _dbSet.FirstOrDefaultAsync(x=>x.Id == id);
+            return await _dbSet.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task UpdateAsync(T entity)
