@@ -12,7 +12,7 @@ namespace Application.Features.Category.Commands.CreateCategory
         public string? Name { get; init; } = string.Empty;
         public string? ImageURL { get; init; } = string.Empty;
         public int? ParentCategoryId { get; init; } = 0;
-        public CreateCategoryRequest(string? name, string? imageURL, int parentCategoryId)
+        public CreateCategoryRequest(string? name, string? imageURL, int? parentCategoryId)
         {
             Name = name;
             ImageURL = imageURL;

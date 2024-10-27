@@ -13,10 +13,11 @@ namespace CatalogService.Application.Features.Category.Dtos
         public string Name { get; set; } = string.Empty;
         public string? ImageURL { get; set; }
         public string? ParentCategoryName{ get; set; }
+        
 
         public void Mapping(Profile profile)
         {
-            var c = profile.CreateMap<Domain.Entities.Category, CategoryDto>().ForMember(d => d.ParentCategoryName, opt => opt.MapFrom(src => src.ParentCategory != null ? src.ParentCategory.Name : string.Empty));
+            profile.CreateMap<Domain.Entities.Category, CategoryDto>().ForMember(d => d.ParentCategoryName, opt => opt.MapFrom(src => src.ParentCategory != null ? src.ParentCategory.Name : string.Empty));
         }
     }
 }

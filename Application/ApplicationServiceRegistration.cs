@@ -3,7 +3,6 @@ using System.Reflection;
 using FluentValidation.AspNetCore;
 using CatalogService.Domain.Entities;
 using FluentValidation;
-using Application.Features.Product.Common;
 namespace CatalogService.Application
 {
     public static class ApplicationServiceRegistration

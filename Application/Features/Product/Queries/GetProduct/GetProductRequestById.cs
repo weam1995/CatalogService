@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Product.Queries.GetProduct
 {
-    public record GetProductRequest : IRequest<ProductDto>
+    public record GetProductRequestById : IRequest<ProductDto>
     {
-        public int ProductId { get; set; }
+        public int Id { get; set; }
+        public GetProductRequestById(int id)
+        {
+            Id = id;
+        }
     }
 }

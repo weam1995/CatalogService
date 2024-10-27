@@ -15,7 +15,8 @@ namespace CatalogService.Persistence.Configurations
         {
             builder.Property(x => x.Name).IsRequired().HasMaxLength(50);
             builder.HasMany(x => x.Products).WithOne(x => x.Category).HasForeignKey(x => x.CategoryId).IsRequired(true);
-            builder.HasMany(x => x.SubCategories).WithOne(x => x.ParentCategory).HasForeignKey(x => x.ParentCategoryId).IsRequired(false).OnDelete(DeleteBehavior.Cascade);
+            //builder.HasMany(x => x.SubCategories).WithOne(x => x.ParentCategory).IsRequired(false).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(x => x.ParentCategory).WithMany(x => x.SubCategories).HasForeignKey(x => x.ParentCategoryId).IsRequired(false);
         }
     }
 }

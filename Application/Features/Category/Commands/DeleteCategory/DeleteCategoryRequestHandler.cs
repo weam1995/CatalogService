@@ -1,4 +1,6 @@
 ﻿using Application.Contracts.Persistence;
+using Application.Features.Product.Commands.DeleteProduct;
+using Ardalis.GuardClauses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -10,9 +12,10 @@ namespace Application.Features.Category.Commands.DeleteCategory
 {
     public class DeleteCategoryRequestHandler(ICategoryRepository categoryRepository) : IRequestHandler<DeleteCategoryRequest>
     {
-        async Task IRequestHandler<DeleteCategoryRequest>.Handle(DeleteCategoryRequest request, CancellationToken cancellationToken)
+        public async Task Handle(DeleteCategoryRequest request, CancellationToken cancellationToken)
         {
-            var category = await categoryRepository.GetByIdAsync(request.CategoryId);
+            var category = await categoryRepository.GetByIdAsync(request.Id);
+            if (category is null) throw new NotFoundException(request.Id.ToString(), "Category");
             await categoryRepository.DeleteAsync(category);
         }
     }

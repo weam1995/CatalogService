@@ -9,6 +9,10 @@ namespace Application.Features.Category.Commands.DeleteCategory
 {
     public record DeleteCategoryRequest : IRequest
     {
-        public int CategoryId { get; init; }
+        public int Id { get; set; }
+        public DeleteCategoryRequest(int id)
+        {
+            Id = id;
+        }
     }
 }

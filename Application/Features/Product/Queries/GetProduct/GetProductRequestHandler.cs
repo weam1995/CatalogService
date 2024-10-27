@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Product.Queries.GetProduct
 {
-    public class GetProductRequestHandler(IProductRepository productRepository, IMapper mapper) : IRequestHandler<GetProductRequest, ProductDto>
+    public class GetProductRequestHandler(IProductRepository productRepository, IMapper mapper) : IRequestHandler<GetProductRequestById, ProductDto>
     {
-        public async Task<ProductDto> Handle(GetProductRequest request, CancellationToken cancellationToken)
+        public async Task<ProductDto> Handle(GetProductRequestById request, CancellationToken cancellationToken)
         {
-            var product = await productRepository.GetByIdAsync(request.ProductId);
+            var product = await productRepository.GetByIdAsync(request.Id);
             return mapper.Map<ProductDto>(product);
         }
     }
