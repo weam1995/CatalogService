@@ -15,7 +15,11 @@ namespace Application.Features.Category.Queries.GetCategory
         public async Task<CategoryDto> Handle(GetCategoryByIdRequest request, CancellationToken cancellationToken)
         {
             var category = await categoryRepository.GetByIdAsync(request.Id);
-            return mapper.Map<CategoryDto>(category);
+            if(category is not null)
+            {
+                return mapper.Map<CategoryDto>(category);
+            }
+            return new CategoryDto();
         }
     }
 }

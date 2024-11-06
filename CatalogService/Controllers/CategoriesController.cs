@@ -24,7 +24,7 @@ namespace CatalogService.Controllers
     public class CategoriesController(ISender sender) : ControllerBase
     {
         [HttpGet]
-        [ProducesResponseType(typeof(List<ProductDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<CategoryDto>), StatusCodes.Status200OK)]
         public async Task<IActionResult> ListCategories()
         {
             var result = await sender.Send(new ListCategoriesRequest());
@@ -32,7 +32,7 @@ namespace CatalogService.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(ProductDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(CategoryDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetCategory(int id)
         {
@@ -52,6 +52,8 @@ namespace CatalogService.Controllers
         [HttpPut]
         public async Task<IActionResult> Update([FromBody] UpdateCategoryRequest request)
         {
+            var category = await sender.Send(new GetCategoryByIdRequest(request.Id));
+            if (category.Equals(new CategoryDto())) return NotFound();
             await sender.Send(request);
             return Ok();
         }

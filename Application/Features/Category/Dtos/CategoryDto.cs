@@ -13,7 +13,16 @@ namespace CatalogService.Application.Features.Category.Dtos
         public string Name { get; set; } = string.Empty;
         public string? ImageURL { get; set; }
         public string? ParentCategoryName{ get; set; }
-        
+
+        public override bool Equals(object obj)
+        {
+            if (obj is CategoryDto other)
+            {
+                return this.Name == other.Name &&
+                       this.ImageURL == other.ImageURL;
+            }
+            return false;
+        }
 
         public void Mapping(Profile profile)
         {

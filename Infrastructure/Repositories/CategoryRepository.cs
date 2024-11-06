@@ -21,7 +21,7 @@ namespace CatalogService.Persistence.Repositories
         {
             return await _dbContext.Categories.Include(x => x.ParentCategory).ToListAsync();
         }
-        public override async Task<Category> GetByIdAsync(int id)
+        public override async Task<Category?> GetByIdAsync(int id)
         {
             return await _dbContext.Categories.Include(x=>x.ParentCategory).FirstOrDefaultAsync(x => x.Id == id);
         }

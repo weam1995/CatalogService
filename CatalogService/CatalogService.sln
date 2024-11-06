@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService", "CatalogService.csproj", "{25381316-EC44-4044-AF49-977410603EBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService", "CatalogService.csproj", "{25381316-EC44-4044-AF49-977410603EBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Domain", "..\Domain\CatalogService.Domain.csproj", "{08AF4940-3B48-45E3-89C4-5718BEDCD7B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Domain", "..\Domain\CatalogService.Domain.csproj", "{08AF4940-3B48-45E3-89C4-5718BEDCD7B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Application", "..\Application\CatalogService.Application.csproj", "{DFC6DE3B-D0C2-46C7-B1DC-C9601ACB0654}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Application", "..\Application\CatalogService.Application.csproj", "{DFC6DE3B-D0C2-46C7-B1DC-C9601ACB0654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Persistence", "..\Infrastructure\CatalogService.Persistence.csproj", "{A8FF1BB3-7C9B-452B-BAF3-A21D04348AC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Persistence", "..\Infrastructure\CatalogService.Persistence.csproj", "{A8FF1BB3-7C9B-452B-BAF3-A21D04348AC7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{13304263-CF6C-43B5-ACE9-03A91AD2102C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{19B8CD5D-4098-484A-BC26-06DB49958DC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Application.UnitTests", "..\CatalogService.Tests\CatalogService.Application.UnitTests.csproj", "{F5D50C85-B5CE-412E-96B6-187A99338839}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Application.UnitTests", "..\CatalogService.Tests\CatalogService.Application.UnitTests.csproj", "{F5D50C85-B5CE-412E-96B6-187A99338839}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{79BDA522-6CC5-4ABB-9214-5399D7E5AF85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.IntegrationTests", "..\IntegrationTests\CatalogService.IntegrationTests.csproj", "{63345821-156F-491D-A579-0705546DDCB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.IntegrationTests", "..\IntegrationTests\CatalogService.IntegrationTests.csproj", "{63345821-156F-491D-A579-0705546DDCB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Api.UnitTests", "..\CatalogService.Api.UnitTests\CatalogService.Api.UnitTests.csproj", "{55FDA011-5ABB-4B1B-BF07-144271CE03FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{63345821-156F-491D-A579-0705546DDCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63345821-156F-491D-A579-0705546DDCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63345821-156F-491D-A579-0705546DDCB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FDA011-5ABB-4B1B-BF07-144271CE03FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FDA011-5ABB-4B1B-BF07-144271CE03FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FDA011-5ABB-4B1B-BF07-144271CE03FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FDA011-5ABB-4B1B-BF07-144271CE03FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{A8FF1BB3-7C9B-452B-BAF3-A21D04348AC7} = {19B8CD5D-4098-484A-BC26-06DB49958DC4}
 		{F5D50C85-B5CE-412E-96B6-187A99338839} = {79BDA522-6CC5-4ABB-9214-5399D7E5AF85}
 		{63345821-156F-491D-A579-0705546DDCB2} = {79BDA522-6CC5-4ABB-9214-5399D7E5AF85}
+		{55FDA011-5ABB-4B1B-BF07-144271CE03FD} = {79BDA522-6CC5-4ABB-9214-5399D7E5AF85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {75DBADBE-8A91-433D-9C9A-4A0AC015F2FC}
