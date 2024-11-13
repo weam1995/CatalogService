@@ -1,4 +1,4 @@
-﻿using Application.Contracts.Persistence;
+﻿
 using Application.Features.Category.Commands.CreateCategory;
 using Application.Features.Category.Commands.DeleteCategory;
 using Application.Features.Category.Commands.UpdateCategory;
@@ -63,20 +63,7 @@ namespace CatalogService.Controllers
         public async Task<IActionResult> Update([FromBody] UpdateProductRequest request)
         {
             await sender.Send(request);
-            var producer = new KafkaProducer().Producer;
-            var productChangedEvent = new ProductChangedEvent()
-            {
-                Id = request.Id,
-                Name = request.Name,
-                ImageURL = request.ImageURL,
-                Price = request.Price,
-            };
-            await producer.ProduceAsync("productChange-topic", new Message<string, string>
-            {
-                Key = request.Id.ToString(),
-                Value = JsonConvert.SerializeObject(productChangedEvent)
-            });
-
+            
             return Ok();
         }
 

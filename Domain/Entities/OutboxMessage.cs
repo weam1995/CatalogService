@@ -2,35 +2,16 @@
 {
     public class OutboxMessage
     {
-        /// <summary>
-        /// Id of message.
-        /// </summary>
         public Guid Id { get; private set; }
-
-        /// <summary>
-        /// Occurred on.
-        /// </summary>
-        public DateTime OccurredOn { get; private set; }
-
-        /// <summary>
-        /// Full name of message type.
-        /// </summary>
+        public DateTime CreatedAt { get; private set; }
+        public DateTime ProcessedAt { get; set; }
         public string Type { get; private set; }
-
-        /// <summary>
-        /// Message data - serialzed to JSON.
-        /// </summary>
         public string Data { get; private set; }
 
-        private OutboxMessage()
-        {
-
-        }
-
-        internal OutboxMessage(DateTime occurredOn, string type, string data)
+        public OutboxMessage(DateTime createdAt, string type, string data)
         {
             Id = Guid.NewGuid();
-            OccurredOn = occurredOn;
+            CreatedAt = createdAt;
             Type = type;
             Data = data;
         }

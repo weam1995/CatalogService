@@ -17,6 +17,8 @@ namespace CatalogService.Persistence
         public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<CatalogDBContext>(options => options.UseSqlServer(configuration.GetConnectionString("CatalogDBConnectionString")));
+            services.AddScoped<ICatalogDBContext, CatalogDBContext>(); 
+            //(provider => provider.GetService<CatalogDBContext>());
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();

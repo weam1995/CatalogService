@@ -1,4 +1,4 @@
-﻿using Application.Contracts.Persistence;
+﻿
 using CatalogService.Application.Features.Category.Dtos;
 using MediatR;
 using System;
