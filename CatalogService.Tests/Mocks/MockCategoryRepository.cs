@@ -1,5 +1,6 @@
-﻿using Application.Contracts.Persistence;
+﻿
 using CatalogService.Domain.Entities;
+using CatalogService.Domain.Interfaces.Persistence;
 using Moq;
 using System;
 using System.Collections.Generic;
