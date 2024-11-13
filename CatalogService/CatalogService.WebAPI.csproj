@@ -13,12 +13,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Application\CatalogService.Application.csproj" />
     <ProjectReference Include="..\Infrastructure\CatalogService.Persistence.csproj" />
+    <ProjectReference Include="..\KafkaDemo\KafkaDemo.csproj" />
   </ItemGroup>
 
 </Project>

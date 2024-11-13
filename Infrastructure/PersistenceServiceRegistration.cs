@@ -1,4 +1,4 @@
-﻿using Application.Contracts.Persistence;
+﻿using CatalogService.Domain.Interfaces.Persistence;
 using CatalogService.Persistence.Contexts;
 using CatalogService.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;

@@ -1,6 +1,6 @@
-﻿using Application.Contracts.Persistence;
-using Application.Features.Product.Commands.DeleteProduct;
+﻿using Application.Features.Product.Commands.DeleteProduct;
 using Ardalis.GuardClauses;
+using CatalogService.Domain.Interfaces.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;

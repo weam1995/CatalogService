@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.Mapper;
 using CatalogService.Domain.ValueObjects;
+using AutoMapper;
 
 namespace Application.Features.Product.Commands.CreateProduct
 {
@@ -17,5 +18,10 @@ namespace Application.Features.Product.Commands.CreateProduct
         public int CategoryId{ get; set; }
         public Money Price { get; set; }
         public int Amount { get; set; }
+
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap<CatalogService.Domain.Entities.Product, CreateProductRequest>().ReverseMap();
+        }
     }
 }

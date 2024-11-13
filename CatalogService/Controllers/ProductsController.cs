@@ -13,9 +13,15 @@ using Ardalis.GuardClauses;
 using CatalogService.Application.Features.Category.Dtos;
 using CatalogService.Application.Features.Product.Dtos;
 using CatalogService.Persistence.Contexts;
+using Confluent.Kafka;
+using KafkaClient.Producer;
+using KafkaDemo.Events;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace CatalogService.Controllers
 {
@@ -57,6 +63,20 @@ namespace CatalogService.Controllers
         public async Task<IActionResult> Update([FromBody] UpdateProductRequest request)
         {
             await sender.Send(request);
+            var producer = new KafkaProducer().Producer;
+            var productChangedEvent = new ProductChangedEvent()
+            {
+                Id = request.Id,
+                Name = request.Name,
+                ImageURL = request.ImageURL,
+                Price = request.Price,
+            };
+            await producer.ProduceAsync("productChange-topic", new Message<string, string>
+            {
+                Key = request.Id.ToString(),
+                Value = JsonConvert.SerializeObject(productChangedEvent)
+            });
+
             return Ok();
         }
 

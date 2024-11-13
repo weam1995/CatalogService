@@ -1,6 +1,6 @@
-﻿using Application.Contracts.Persistence;
-using AutoMapper;
+﻿using AutoMapper;
 using CatalogService.Application.Features.Product.Dtos;
+using CatalogService.Domain.Interfaces.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;

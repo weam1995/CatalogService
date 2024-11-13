@@ -1,5 +1,5 @@
-﻿using Application.Contracts.Persistence;
-using Ardalis.GuardClauses;
+﻿using Ardalis.GuardClauses;
+using CatalogService.Domain.Interfaces.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
 using System;

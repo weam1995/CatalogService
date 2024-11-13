@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Contracts.Persistence
+namespace CatalogService.Domain.Interfaces.Persistence
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     {

@@ -1,5 +1,5 @@
-﻿using Application.Contracts.Persistence;
-using CatalogService.Domain.Entities.Common;
+﻿using CatalogService.Domain.Entities.Common;
+using CatalogService.Domain.Interfaces.Persistence;
 using CatalogService.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
