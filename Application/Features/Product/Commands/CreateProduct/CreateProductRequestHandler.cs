@@ -14,7 +14,8 @@ namespace Application.Features.Product.Commands.CreateProduct
         public async Task<int> Handle(CreateProductRequest request, CancellationToken cancellationToken)
         {
             var newProduct = mapper.Map<CatalogService.Domain.Entities.Product>(request);
-            return await productRepository.CreateAsync(newProduct);
+            await productRepository.CreateAsync(newProduct);
+            return newProduct.Id;
         }
     }
 }

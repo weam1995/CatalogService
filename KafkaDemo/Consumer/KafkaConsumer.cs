@@ -23,6 +23,8 @@ namespace KafkaClient.Consumer
                 GroupId = "cart-group",
                 BootstrapServers = "localhost:9092",
                 AutoOffsetReset = AutoOffsetReset.Earliest,
+                EnableAutoCommit = true,
+                EnableAutoOffsetStore = false
             };
             Consumer = new ConsumerBuilder<string, string>(config).Build();
             Consumer.Subscribe(topic);
