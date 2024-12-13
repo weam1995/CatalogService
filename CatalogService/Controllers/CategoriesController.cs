@@ -12,18 +12,21 @@ using CatalogService.Application.Features.Product.Dtos;
 using CatalogService.Domain.Entities;
 using CatalogService.Persistence.Contexts;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CatalogService.Controllers
 {
     [ApiController]
+    [Authorize]
     [Consumes("application/json")]
     [Produces("application/json")]
     [Route("/api/[controller]")]
     public class CategoriesController(ISender sender) : ControllerBase
     {
         [HttpGet]
+        [Authorize]
         [ProducesResponseType(typeof(List<CategoryDto>), StatusCodes.Status200OK)]
         public async Task<IActionResult> ListCategories()
         {
@@ -32,6 +35,7 @@ namespace CatalogService.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         [ProducesResponseType(typeof(CategoryDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetCategory(int id)
@@ -42,7 +46,10 @@ namespace CatalogService.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "ManagerOnly")]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(int), StatusCodes.Status401Unauthorized)]
+
         public async Task<IActionResult> Create(CreateCategoryRequest request)
         {
             var result = await sender.Send(request);
@@ -50,6 +57,9 @@ namespace CatalogService.Controllers
         }
 
         [HttpPut]
+        [Authorize(Policy = "ManagerOnly")]
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(int), StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Update([FromBody] UpdateCategoryRequest request)
         {
             var category = await sender.Send(new GetCategoryByIdRequest(request.Id));
@@ -59,6 +69,9 @@ namespace CatalogService.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "ManagerOnly")]
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(int), StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Delete(int id)
         {
             try

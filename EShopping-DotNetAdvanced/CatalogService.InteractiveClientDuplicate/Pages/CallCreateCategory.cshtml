@@ -1,0 +1,18 @@
+﻿@page
+@model CatalogService.Interactive.Pages.CallCreateCategoryModel
+@{
+}
+@if (ViewData["Response"] != null)
+{
+    <h4>Response:</h4>
+    <div>
+        <strong>Status Code:</strong> @((int)Model.Response.StatusCode) <!-- Casting response status code -->
+    </div>
+    <div>
+        <strong>Response Data:</strong> <pre>@ViewData["Response"]</pre>
+    </div>
+}
+else if (!ModelState.IsValid)
+{
+    <div class="alert alert-danger"><pre>@ViewData["ErrorMessage"]</pre></div>
+}

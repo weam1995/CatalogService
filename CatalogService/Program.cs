@@ -4,6 +4,7 @@ using CatalogService.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,20 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
+
+builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options => { 
+    options.Authority = "https://localhost:5001";
+    options.TokenValidationParameters.ValidateAudience = false;
+});
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("ApiScope", policy =>
+    {
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim("scope", "catalogApi");
+        options.AddPolicy("ManagerOnly", policy => policy.RequireRole("Manager"));
+    });
+});
 builder.Services.AddDbContext<CatalogDBContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddAutoMapper(typeof(Program));
@@ -33,7 +48,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.MapGet("identity", (ClaimsPrincipal user) => user.Claims.Select(c => new { c.Type, c.Value }))
+    .RequireAuthorization();
 app.MapControllers();
 
 app.Run();

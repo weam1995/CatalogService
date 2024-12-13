@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShopping-DotNetAdvanced", "EShopping-DotNetAdvanced.csproj", "{44FB4342-70EA-4C39-BC3C-9E151FC38302}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CartService", "CartService", "{184BC0C4-CA5C-48E7-91EF-8FB3F5A28CB6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartServiceApp", "..\CartServiceApp\CartServiceApp.csproj", "{25821584-FF02-4B6D-9ED7-B8E7C7A6A447}"
@@ -31,16 +29,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Application.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9AD1916E-25EE-4602-A065-7FF6F2850416}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{E0CD6A43-3A4C-493D-BBF2-1918C4E28654}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Interactive", "CatalogService.InteractiveClientDuplicate\CatalogService.Interactive.csproj", "{5EA7C284-9BD2-400E-861C-68217C1F26D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerAspNetIdentity2", "..\IdentityServerAspNetIdentity2\IdentityServerAspNetIdentity2.csproj", "{AE877016-5844-44D0-8D90-7807571D4B28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{44FB4342-70EA-4C39-BC3C-9E151FC38302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44FB4342-70EA-4C39-BC3C-9E151FC38302}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44FB4342-70EA-4C39-BC3C-9E151FC38302}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44FB4342-70EA-4C39-BC3C-9E151FC38302}.Release|Any CPU.Build.0 = Release|Any CPU
 		{25821584-FF02-4B6D-9ED7-B8E7C7A6A447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{25821584-FF02-4B6D-9ED7-B8E7C7A6A447}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25821584-FF02-4B6D-9ED7-B8E7C7A6A447}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +69,14 @@ Global
 		{9604773A-E9D4-4388-9EAE-4025E4E13212}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9604773A-E9D4-4388-9EAE-4025E4E13212}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9604773A-E9D4-4388-9EAE-4025E4E13212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA7C284-9BD2-400E-861C-68217C1F26D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA7C284-9BD2-400E-861C-68217C1F26D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA7C284-9BD2-400E-861C-68217C1F26D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA7C284-9BD2-400E-861C-68217C1F26D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE877016-5844-44D0-8D90-7807571D4B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE877016-5844-44D0-8D90-7807571D4B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE877016-5844-44D0-8D90-7807571D4B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE877016-5844-44D0-8D90-7807571D4B28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +92,8 @@ Global
 		{8213709A-3FDA-4E34-A7AE-9E297DC0E69C} = {6A7EA0B2-7364-4FFD-982B-62DF7C2E6248}
 		{9604773A-E9D4-4388-9EAE-4025E4E13212} = {9AD1916E-25EE-4602-A065-7FF6F2850416}
 		{9AD1916E-25EE-4602-A065-7FF6F2850416} = {4CD57EE2-1949-4EE4-8C04-AE647CB3ECC5}
+		{5EA7C284-9BD2-400E-861C-68217C1F26D8} = {4CD57EE2-1949-4EE4-8C04-AE647CB3ECC5}
+		{AE877016-5844-44D0-8D90-7807571D4B28} = {E0CD6A43-3A4C-493D-BBF2-1918C4E28654}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {07026881-06B6-46F8-B0F4-7F4D2A910E82}
