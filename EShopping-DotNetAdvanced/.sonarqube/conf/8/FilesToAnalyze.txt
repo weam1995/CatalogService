@@ -1,0 +1,11 @@
+﻿C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\Controllers\CategoriesController.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\Controllers\ProductsController.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\Program.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\obj\Debug\net8.0\CatalogService.WebAPI.GlobalUsings.g.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\obj\Debug\net8.0\CatalogService.WebAPI.AssemblyInfo.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\obj\Debug\net8.0\CatalogService.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\appsettings.Development.json
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\appsettings.json
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\CatalogService.http
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CatalogService\Properties\launchSettings.json

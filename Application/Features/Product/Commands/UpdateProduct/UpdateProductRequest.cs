@@ -17,7 +17,7 @@ namespace Application.Features.Product.Commands.UpdateProduct
         public string Description { get; set; } = string.Empty;
         public string? ImageURL { get; set; }
         public int CategoryId { get; set; }
-        public Money Price { get; set; }
+        public Money Price { get; set; } = new Money(0, 0);
         public int Amount { get; set; }
 
         public void Mapping(Profile profile)

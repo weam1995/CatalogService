@@ -16,7 +16,7 @@ namespace Application.Features.Product.Commands.UpdateProduct
 {
     public class UpdateProductRequestHandler(IProductRepository productRepository, IMapper mapper) : IRequestHandler<UpdateProductRequest>
     {
-        private async Task SendMessageToDeadLetterQueue(IProducer<string,string> producer, Message<string,string> kafkaMessage)
+        private static async Task SendMessageToDeadLetterQueue(IProducer<string,string> producer, Message<string,string> kafkaMessage)
         {
             await producer.ProduceAsync("DeadLetterQueue", kafkaMessage);
         }
@@ -46,11 +46,11 @@ namespace Application.Features.Product.Commands.UpdateProduct
                         {
                             Key = request.Id.ToString(),
                             Value = JsonConvert.SerializeObject(productChangedEvent)
-                        });
+                        }, cancellationToken);
                         messageConsumed = true;
                         break;
                     }
-                    catch(Exception ex)
+                    catch(Exception)
                     {
                         retries++;
                     }

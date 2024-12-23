@@ -18,7 +18,7 @@ namespace CatalogService.Application.UnitTests.Features.Category.Validations
 
         }
         [Fact]
-        public async Task CreateCategoryRequestValidation_EmptyCategoryName_ValidationShouldFail()
+        public void CreateCategoryRequestValidation_EmptyCategoryName_ValidationShouldFail()
         {
             //Arrange
             var request = new CreateCategoryRequest(string.Empty, "https://gardening.com", 0);
@@ -31,7 +31,7 @@ namespace CatalogService.Application.UnitTests.Features.Category.Validations
         }
 
         [Fact]
-        public async Task CreateCategoryRequestValidation_InvalidImageUrl_ValidationShouldFail()
+        public void CreateCategoryRequestValidation_InvalidImageUrl_ValidationShouldFail()
         {
             //Arrange
             var request = new CreateCategoryRequest("Gardening", "Hello World", 0);
@@ -44,7 +44,7 @@ namespace CatalogService.Application.UnitTests.Features.Category.Validations
         }
 
         [Fact]
-        public async Task CreateCategoryRequestValidation_EmptyImage_ValidationShouldSucceed()
+        public void CreateCategoryRequestValidation_EmptyImage_ValidationShouldSucceed()
         {
             //Arrange
             var request = new CreateCategoryRequest("Gardening", string.Empty, 0);

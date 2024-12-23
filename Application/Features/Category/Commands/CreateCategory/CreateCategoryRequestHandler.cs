@@ -15,7 +15,7 @@ namespace Application.Features.Category.Commands.CreateCategory
         {
             var newCategory = new CatalogService.Domain.Entities.Category()
             {
-                Name = request.Name,
+                Name = request.Name ?? string.Empty,
                 ImageURL = request.ImageURL,
                 ParentCategoryId = request.ParentCategoryId
             };

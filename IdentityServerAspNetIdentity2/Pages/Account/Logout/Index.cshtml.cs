@@ -53,12 +53,12 @@ public class Index : PageModel
             }
         }
             
-        if (showLogoutPrompt == false)
-        {
-            // if the request for logout was properly authenticated from IdentityServer, then
-            // we don't need to show the prompt and can just log the user out directly.
-            return await OnPost();
-        }
+        //if (showLogoutPrompt == false)
+        //{
+        //    // if the request for logout was properly authenticated from IdentityServer, then
+        //    // we don't need to show the prompt and can just log the user out directly.
+        //    return await OnPost();
+        //}
 
         return Page();
     }
@@ -83,19 +83,17 @@ public class Index : PageModel
             Telemetry.Metrics.UserLogout(idp);
 
             // if it's a local login we can ignore this workflow
-            if (idp != null && idp != Duende.IdentityServer.IdentityServerConstants.LocalIdentityProvider)
+            if (idp != null 
+                && idp != Duende.IdentityServer.IdentityServerConstants.LocalIdentityProvider
+                && await HttpContext.GetSchemeSupportsSignOutAsync(idp))
             {
-                // we need to see if the provider supports external logout
-                if (await HttpContext.GetSchemeSupportsSignOutAsync(idp))
-                {
-                    // build a return URL so the upstream provider will redirect back
-                    // to us after the user has logged out. this allows us to then
-                    // complete our single sign-out processing.
-                    var url = Url.Page("/Account/Logout/Loggedout", new { logoutId = LogoutId });
+                // build a return URL so the upstream provider will redirect back
+                // to us after the user has logged out. this allows us to then
+                // complete our single sign-out processing.
+                var url = Url.Page("/Account/Logout/Loggedout", new { logoutId = LogoutId });
 
-                    // this triggers a redirect to the external provider for sign-out
-                    return SignOut(new AuthenticationProperties { RedirectUri = url }, idp);
-                }
+                // this triggers a redirect to the external provider for sign-out
+                return SignOut(new AuthenticationProperties { RedirectUri = url }, idp);
             }
         }
 

@@ -24,13 +24,13 @@ namespace CatalogService.Application.UnitTests.Mocks
             ];
             mockRepo.Setup(r => r.GetAllAsync()).ReturnsAsync(categories);
             mockRepo.Setup(r => r.GetByIdAsync(It.IsAny<int>())).ReturnsAsync((int id) => { 
-                Category category = categories.FirstOrDefault(x => x.Id == id);
+                Category category = categories.First(x => x.Id == id);
                 category.ParentCategory = categories.FirstOrDefault(x => x.Id == category.ParentCategoryId);
                 return category;
             });
             mockRepo.Setup(r => r.CreateAsync(It.IsAny<Category>())).ReturnsAsync((Category category) =>
             {
-                category.Id = categories.Count();
+                category.Id = categories.Count;
                 categories.Add(category);
                 return category.Id;
             });

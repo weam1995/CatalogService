@@ -55,4 +55,4 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages().RequireAuthorization();
-app.Run();
+await app.RunAsync();

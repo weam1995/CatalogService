@@ -1,0 +1,9 @@
+﻿C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Domain\Entities\Category.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Domain\Entities\Common\BaseEntity.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Domain\Entities\Product.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Domain\Enums\CurrencyCode.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Domain\Interfaces\Persistence\ICategoryRepository.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Domain\Interfaces\Persistence\IGenericRepository.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Domain\Interfaces\Persistence\IProductRepository.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Domain\Models\PagedList.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Domain\ValueObjects\Money.cs

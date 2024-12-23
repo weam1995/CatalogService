@@ -1,0 +1,14 @@
+﻿C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Configurations\CategoryConfiguration.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Configurations\ProductConfiguration.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Contexts\CatalogDBContext.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Migrations\20241018155329_InitialCreate2.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Migrations\20241018155329_InitialCreate2.Designer.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Migrations\20241018160342_InitialCreate3.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Migrations\20241018160342_InitialCreate3.Designer.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Migrations\20241018162742_InitialCreate4.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Migrations\20241018162742_InitialCreate4.Designer.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Migrations\CatalogDBContextModelSnapshot.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\PersistenceServiceRegistration.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Repositories\CategoryRepository.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Repositories\GenericRepository.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\Infrastructure\Repositories\ProductRepository.cs

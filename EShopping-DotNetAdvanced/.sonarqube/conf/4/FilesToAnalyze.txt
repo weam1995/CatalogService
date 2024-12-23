@@ -1,0 +1,37 @@
+﻿C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\BusinessLogic\Dtos\AddCartItemRequestDto.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\BusinessLogic\Dtos\CartDto.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\BusinessLogic\Interfaces\ICartService.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\BusinessLogic\Services\CartService.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\Controllers\V1\CartsController.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\Controllers\V2\CartsController.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\DataAccess\Entities\Cart.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\DataAccess\Entities\CartItem.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\DataAccess\Enums\CurrencyCode.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\DataAccess\ILiteDbContext.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\DataAccess\LiteDbContext.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\DataAccess\LiteDbOptions.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\DataAccess\ValueObjects\Image.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\DataAccess\ValueObjects\Money.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\Extension\ConfigureSwaggerOptions.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\HostedServcies\ProductChangeKafkaConsumerService.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\Program.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\Tests\CartServiceTests.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\Tests\Controllers\CartControllerV1Tests.cs
+C:\Users\Weam_Mahmoud\.nuget\packages\microsoft.net.test.sdk\17.11.1\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\obj\Debug\net8.0\CartServiceApp.GlobalUsings.g.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\obj\Debug\net8.0\CartServiceApp.AssemblyInfo.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\obj\Debug\net8.0\CartServiceApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Weam_Mahmoud\.nuget\packages\microsoft.testplatform.testhost\17.11.1\build\netcoreapp3.1\x64\testhost.exe
+C:\Users\Weam_Mahmoud\.nuget\packages\microsoft.testplatform.testhost\17.11.1\build\netcoreapp3.1\x64\testhost.dll
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\appsettings.Development.json
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\appsettings.json
+C:\Users\Weam_Mahmoud\.nuget\packages\xunit.runner.visualstudio\2.8.2\build\net6.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Weam_Mahmoud\.nuget\packages\xunit.runner.visualstudio\2.8.2\build\net6.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Weam_Mahmoud\.nuget\packages\xunit.runner.visualstudio\2.8.2\build\net6.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\.gitattributes
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\.gitignore
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\CartServiceApp.http
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\DataAccess\Cart-log.db
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\DataAccess\Cart.db
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\CartServiceApp\Properties\launchSettings.json

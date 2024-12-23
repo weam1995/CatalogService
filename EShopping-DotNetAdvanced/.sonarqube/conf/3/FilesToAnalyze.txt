@@ -1,0 +1,12 @@
+﻿C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\Consumer\KafkaConsumer.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\Events\ProductChangedEvent.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\Producer\KafkaProducer.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\Program.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\obj\Debug\net8.0\KafkaDemo.GlobalUsings.g.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\obj\Debug\net8.0\KafkaDemo.AssemblyInfo.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\obj\Debug\net8.0\KafkaDemo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\appsettings.Development.json
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\appsettings.json
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\kafka.yml
+C:\Users\Weam_Mahmoud\OneDrive - EPAM\.NetAdvancedAssignments\Assignment2\KafkaDemo\Properties\launchSettings.json

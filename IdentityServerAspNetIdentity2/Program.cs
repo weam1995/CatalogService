@@ -31,7 +31,7 @@ try
         return;
     }
 
-    app.Run();
+    await app.RunAsync();
 }
 catch (Exception ex) when (ex is not HostAbortedException)
 {
