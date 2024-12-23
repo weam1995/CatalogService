@@ -7,7 +7,7 @@ using Serilog;
 
 namespace IdentityServerAspNetIdentity2;
 
-internal static class HostingExtensions
+public static class HostingExtensions
 {
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
