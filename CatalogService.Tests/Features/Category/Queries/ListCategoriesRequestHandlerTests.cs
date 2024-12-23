@@ -6,11 +6,6 @@ using CatalogService.Application.UnitTests.Mocks;
 using CatalogService.Domain.Interfaces.Persistence;
 using Moq;
 using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CatalogService.Application.UnitTests.Features.Category.Queries
 {

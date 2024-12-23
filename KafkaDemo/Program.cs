@@ -1,6 +1,3 @@
-using KafkaClient.Consumer;
-using KafkaClient.Producer;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

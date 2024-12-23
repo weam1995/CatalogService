@@ -1,9 +1,7 @@
-using Microsoft.AspNetCore.Components.Forms;
+﻿using System.Text;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Net.Http;
-using System.Text;
-using System.Text.Json;
 
 namespace CatalogService.Interactive.Pages
 {
@@ -30,7 +28,7 @@ namespace CatalogService.Interactive.Pages
             {
                 // Optionally handle the response
                 var responseData = await response.Content.ReadAsStringAsync();
-               // ViewData["ResponseCode"] = response.StatusCode;
+                // ViewData["ResponseCode"] = response.StatusCode;
                 ViewData["Response"] = responseData; // Store response data to show in the view
                 return Page();
             }

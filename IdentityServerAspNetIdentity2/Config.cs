@@ -5,25 +5,22 @@ namespace IdentityServerAspNetIdentity2;
 public static class Config
 {
     public static IEnumerable<IdentityResource> IdentityResources =>
-        new IdentityResource[]
-        {
+        [
             new IdentityResources.OpenId(),
             new IdentityResources.Profile(),
-            new IdentityResource("roles", new[] { "role" })
-        };
+            new IdentityResource("roles", ["role"])
+        ];
 
     public static IEnumerable<ApiScope> ApiScopes =>
-        new ApiScope[]
-        {
+        [
             new ApiScope("catalogApi"),
-        };
+        ];
 
     public static IEnumerable<Client> Clients =>
         new Client[]
         {
             // m2m client credentials flow client
-            new Client
-            {
+            new() {
                 ClientId = "m2m.client",
                 ClientName = "Client Credentials Client",
 
@@ -34,8 +31,7 @@ public static class Config
             },
 
             // interactive client using code flow + pkce
-            new Client
-            {
+            new() {
                 ClientId = "69f01650-edfd-4b6c-a243-6c45bd316040",
                 ClientSecrets = { new Secret("client_secret".Sha256()) },
 

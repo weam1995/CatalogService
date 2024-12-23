@@ -1,28 +1,13 @@
-﻿
-using Application.Features.Category.Commands.CreateCategory;
-using Application.Features.Category.Commands.DeleteCategory;
-using Application.Features.Category.Commands.UpdateCategory;
-using Application.Features.Category.Queries.GetCategory;
-using Application.Features.Category.Queries.ListCategories;
-using Application.Features.Product.Commands.CreateProduct;
+﻿using Application.Features.Product.Commands.CreateProduct;
 using Application.Features.Product.Commands.DeleteProduct;
 using Application.Features.Product.Commands.UpdateProduct;
 using Application.Features.Product.Queries.GetProduct;
 using Application.Features.Product.Queries.ListProducts;
 using Ardalis.GuardClauses;
-using CatalogService.Application.Features.Category.Dtos;
 using CatalogService.Application.Features.Product.Dtos;
-using CatalogService.Persistence.Contexts;
-using Confluent.Kafka;
-using KafkaClient.Producer;
-using KafkaDemo.Events;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace CatalogService.Controllers
 {
@@ -74,7 +59,7 @@ namespace CatalogService.Controllers
         public async Task<IActionResult> Update([FromBody] UpdateProductRequest request)
         {
             await sender.Send(request);
-           
+
 
             return Ok();
         }
@@ -91,7 +76,7 @@ namespace CatalogService.Controllers
                 await sender.Send(new DeleteProductRequest(id));
                 return Ok();
             }
-            catch(NotFoundException ex)
+            catch (NotFoundException ex)
             {
                 return NotFound(ex.Message);
             }

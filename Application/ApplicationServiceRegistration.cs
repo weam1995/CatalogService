@@ -1,8 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using FluentValidation.AspNetCore;
-using CatalogService.Domain.Entities;
-using FluentValidation;
 namespace CatalogService.Application
 {
     public static class ApplicationServiceRegistration

@@ -1,18 +1,10 @@
 ﻿
 using Application.Features.Category.Commands.CreateCategory;
-using Application.Features.Category.Queries.GetCategory;
 using AutoMapper;
-using CatalogService.Application.Features.Category.Dtos;
 using CatalogService.Application.UnitTests.Mocks;
 using CatalogService.Domain.Interfaces.Persistence;
 using Moq;
 using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CatalogService.UnitTests.Features.Category.Commands
 {
@@ -33,7 +25,7 @@ namespace CatalogService.UnitTests.Features.Category.Commands
             //Arrange
             var handler = new CreateCategoryRequestHandler(_mockRepo.Object);
             //Act
-            var result = await handler.Handle(new CreateCategoryRequest("Gardening","https://gardening.com/",0), CancellationToken.None);
+            var result = await handler.Handle(new CreateCategoryRequest("Gardening", "https://gardening.com/", 0), CancellationToken.None);
             //Assert
             result.ShouldBe(5);
         }

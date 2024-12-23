@@ -1,9 +1,5 @@
-using IdentityModel.Client;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
+﻿using System.Text.Json;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Net.Http.Headers;
-using System.Text.Json;
 
 namespace CatalogService.Interactive.Pages
 {

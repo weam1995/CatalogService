@@ -7,7 +7,4 @@ namespace IdentityServerAspNetIdentity2.Pages.Account;
 
 public class AccessDeniedModel : PageModel
 {
-    public void OnGet()
-    {
-    }
 }

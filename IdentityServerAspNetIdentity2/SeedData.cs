@@ -1,12 +1,10 @@
-﻿using System.Security.Claims;
-using IdentityModel;
+﻿using IdentityModel;
 using IdentityServerAspNetIdentity2.Data;
-using IdentityServerAspNetIdentity2.Data.Migrations;
 using IdentityServerAspNetIdentity2.Models;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Security.Claims;
 
 namespace IdentityServerAspNetIdentity2;
 
@@ -104,7 +102,7 @@ public class SeedData
                 throw;
             }
         }
-     
+
     }
     public static async Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
     {

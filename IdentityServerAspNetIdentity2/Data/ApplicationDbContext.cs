@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using IdentityServerAspNetIdentity2.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using IdentityServerAspNetIdentity2.Models;
 
 namespace IdentityServerAspNetIdentity2.Data;
 

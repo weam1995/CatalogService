@@ -4,16 +4,10 @@ using Application.Features.Category.Commands.DeleteCategory;
 using Application.Features.Category.Commands.UpdateCategory;
 using Application.Features.Category.Queries.GetCategory;
 using Application.Features.Category.Queries.ListCategories;
-using Application.Features.Product.Commands.DeleteProduct;
-using Application.Features.Product.Queries.ListProducts;
 using Ardalis.GuardClauses;
 using CatalogService.Application.Features.Category.Dtos;
-using CatalogService.Application.Features.Product.Dtos;
-using CatalogService.Domain.Entities;
-using CatalogService.Persistence.Contexts;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CatalogService.Controllers

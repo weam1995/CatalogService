@@ -1,12 +1,6 @@
 ﻿using Application.Mapper;
 using AutoMapper;
-using CatalogService.Application.Features.Category.Dtos;
 using CatalogService.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CatalogService.Application.Features.Product.Dtos
 {

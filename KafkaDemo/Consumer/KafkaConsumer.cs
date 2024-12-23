@@ -1,9 +1,4 @@
 ﻿using Confluent.Kafka;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KafkaClient.Consumer
 {
@@ -17,7 +12,8 @@ namespace KafkaClient.Consumer
         //    }, stoppingToken);
         //}
         public IConsumer<string, string> Consumer { get; private set; }
-        public KafkaConsumer(string topic) {
+        public KafkaConsumer(string topic)
+        {
             var config = new ConsumerConfig
             {
                 GroupId = "cart-group",

@@ -2,9 +2,6 @@ using CatalogService.Application;
 using CatalogService.Persistence;
 using CatalogService.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options => { 
+builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
+{
     options.Authority = "https://localhost:5001";
     options.TokenValidationParameters.ValidateAudience = false;
 });

@@ -2,11 +2,6 @@
 using CatalogService.Domain.Interfaces.Persistence;
 using CatalogService.Domain.Models;
 using CatalogService.Persistence.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CatalogService.Persistence.Repositories
 {
@@ -20,7 +15,7 @@ namespace CatalogService.Persistence.Repositories
         }
         public async Task<PagedList<Product>> GetAllAsync(int categoryId, int pageIndex)
         {
-            return PagedList<Product>.ToPagedList(_dbContext.Products.Where(x=>x.CategoryId == categoryId).OrderBy(on => on.Name),
+            return PagedList<Product>.ToPagedList(_dbContext.Products.Where(x => x.CategoryId == categoryId).OrderBy(on => on.Name),
             pageIndex,
             _pageSize);
         }

@@ -5,18 +5,12 @@ using KafkaClient.Producer;
 using KafkaDemo.Events;
 using MediatR;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Confluent.Kafka.ConfigPropertyNames;
 
 namespace Application.Features.Product.Commands.UpdateProduct
 {
     public class UpdateProductRequestHandler(IProductRepository productRepository, IMapper mapper) : IRequestHandler<UpdateProductRequest>
     {
-        private static async Task SendMessageToDeadLetterQueue(IProducer<string,string> producer, Message<string,string> kafkaMessage)
+        private static async Task SendMessageToDeadLetterQueue(IProducer<string, string> producer, Message<string, string> kafkaMessage)
         {
             await producer.ProduceAsync("DeadLetterQueue", kafkaMessage);
         }
@@ -38,7 +32,7 @@ namespace Application.Features.Product.Commands.UpdateProduct
             {
                 var retries = 0;
                 bool messageConsumed = false;
-                while (retries< retryCount && !messageConsumed)
+                while (retries < retryCount && !messageConsumed)
                 {
                     try
                     {
@@ -50,7 +44,7 @@ namespace Application.Features.Product.Commands.UpdateProduct
                         messageConsumed = true;
                         break;
                     }
-                    catch(Exception)
+                    catch (Exception)
                     {
                         retries++;
                     }
@@ -62,7 +56,7 @@ namespace Application.Features.Product.Commands.UpdateProduct
                 });
 
             }
-            catch (ProduceException<string,string>)
+            catch (ProduceException<string, string>)
             {
                 await SendMessageToDeadLetterQueue(producer, new Message<string, string>
                 {

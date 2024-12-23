@@ -1,12 +1,7 @@
-﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Application.Mapper;
-using CatalogService.Domain.ValueObjects;
+﻿using Application.Mapper;
 using AutoMapper;
+using CatalogService.Domain.ValueObjects;
+using MediatR;
 
 namespace Application.Features.Product.Commands.CreateProduct
 {
@@ -15,8 +10,8 @@ namespace Application.Features.Product.Commands.CreateProduct
         public string Name { get; set; } = string.Empty;
         public string? Description { get; set; }
         public string? ImageURL { get; set; }
-        public int CategoryId{ get; set; }
-        public Money Price { get; set; } = new Money(0,0);
+        public int CategoryId { get; set; }
+        public Money Price { get; set; } = new Money(0, 0);
         public int Amount { get; set; }
 
         public void Mapping(Profile profile)

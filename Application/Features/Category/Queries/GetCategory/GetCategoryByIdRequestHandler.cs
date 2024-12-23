@@ -2,11 +2,6 @@
 using CatalogService.Application.Features.Category.Dtos;
 using CatalogService.Domain.Interfaces.Persistence;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Features.Category.Queries.GetCategory
 {
@@ -15,7 +10,7 @@ namespace Application.Features.Category.Queries.GetCategory
         public async Task<CategoryDto> Handle(GetCategoryByIdRequest request, CancellationToken cancellationToken)
         {
             var category = await categoryRepository.GetByIdAsync(request.Id);
-            if(category is not null)
+            if (category is not null)
             {
                 return mapper.Map<CategoryDto>(category);
             }
